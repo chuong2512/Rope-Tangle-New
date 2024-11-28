@@ -28,7 +28,7 @@ namespace _Twisted._Scripts.ControllerRelated
         {
             Vibration.Init();
             Camera.main.eventMask = clickPreventMask;
-            Implementation.Instance.ShowBanner();
+            //Implementation.Instance.ShowBanner();
             Time.timeScale = 1;
             //if (GAScript.Instance) GAScript.Instance.LevelStart(PlayerPrefs.GetInt("levelnumber", 1).ToString());
         }
@@ -97,7 +97,7 @@ namespace _Twisted._Scripts.ControllerRelated
             PlayerPrefs.SetInt("levelnumber", PlayerPrefs.GetInt("levelnumber", 1) + 1);
             Vibration.Vibrate(27);
             //AttemptsCounter = 0;
-            Implementation.Instance.ShowInterstitial();
+            //Implementation.Instance.ShowInterstitial();
             //ISManager.instance.ShowInterstitialAds();
         }
 
@@ -108,13 +108,13 @@ namespace _Twisted._Scripts.ControllerRelated
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             Vibration.Vibrate(27);
             //ISManager.instance.ShowInterstitialAds();
-            Implementation.Instance.ShowInterstitial();
+            //Implementation.Instance.ShowInterstitial();
             //print("Interstitial : Retry Lv");
         }
 
         public void On_ResetButtonPressed()
         {
-            Implementation.Instance.ShowInterstitial();
+            //Implementation.Instance.ShowInterstitial();
             //if (GAScript.Instance) GAScript.Instance.LevelFail(PlayerPrefs.GetInt("levelnumber", 1).ToString());
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             Vibration.Vibrate(27);
