@@ -12,7 +12,22 @@ namespace _Twisted._Scripts.ControllerRelated
     {
         public static UIController instance;
         public TextMeshProUGUI levelNumText, coinNumText;
-        public GameObject HUD, targetDisplay, winPanel, failPanel,failPanelNonPowerup, targetBallDisplayPanel;
+        public GameObject HUD, targetDisplay, winPanel, failPanel, failPanelNonPowerup, targetBallDisplayPanel;
+
+        public GameObject inapp;
+
+        public void NextLevel()
+        {
+            if (GameDataManager.Instance.playerData.intDiamond >= 50)
+            {
+                GameDataManager.Instance.playerData.SubDiamond(50);
+                MainController.instance.SetActionType(GameState.Levelwin);
+            }
+            else
+            {
+                inapp.SetActive(true);
+            }
+        }
 
         private void Awake()
         {
@@ -28,26 +43,28 @@ namespace _Twisted._Scripts.ControllerRelated
         {
             MainController.GameStateChanged += GameManager_GameStateChanged;
         }
+
         private void OnDisable()
         {
             MainController.GameStateChanged -= GameManager_GameStateChanged;
         }
+
         void GameManager_GameStateChanged(GameState newState, GameState oldState)
         {
-            if(newState==GameState.Levelwin)
+            if (newState == GameState.Levelwin)
             {
                 DOVirtual.DelayedCall(2.5f, () =>
                 {
                     winPanel.SetActive(true);
                     //if(ISManager.instance) ISManager.instance.ShowInterstitialAds();
-                    
                 });
             }
-            if(newState==GameState.Levelfail)
+
+            if (newState == GameState.Levelfail)
             {
                 DOVirtual.DelayedCall(0.75f, () =>
                 {
-                    if(SceneManager.GetActiveScene().buildIndex < 4)
+                    if (SceneManager.GetActiveScene().buildIndex < 4)
                         failPanelNonPowerup.SetActive(true);
                     else failPanel.SetActive(true);
                 });
@@ -58,5 +75,5 @@ namespace _Twisted._Scripts.ControllerRelated
         {
             coinNumText.text = PlayerPrefs.GetInt("TotalCoins", 0).ToString();
         }
-    }   
+    }
 }

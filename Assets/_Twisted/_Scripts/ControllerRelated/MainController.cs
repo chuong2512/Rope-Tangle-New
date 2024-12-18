@@ -29,7 +29,7 @@ namespace _Twisted._Scripts.ControllerRelated
         public GameState GameState
         {
             get => _gameState;
-            private set
+            set
             {
                 if (value != _gameState)
                 {
