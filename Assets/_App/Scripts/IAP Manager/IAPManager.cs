@@ -7,6 +7,7 @@ using UnityEngine.Purchasing;
 
 public class IAPKey
 {
+    public const string REMOVEADS = "remove_ads";
     public const string PACK1 = "add1";
     public const string PACK2 = "add3";
     public const string PACK3 = "add5";
@@ -43,6 +44,7 @@ public class IAPManager : PersistentSingleton<IAPManager>, IStoreListener
 
         var builder = ConfigurationBuilder.Instance(StandardPurchasingModule.Instance());
 
+        builder.AddProduct(IAPKey.REMOVEADS, ProductType.NonConsumable);
         builder.AddProduct(IAPKey.PACK1, ProductType.Consumable);
         builder.AddProduct(IAPKey.PACK2, ProductType.Consumable);
         builder.AddProduct(IAPKey.PACK3, ProductType.Consumable);

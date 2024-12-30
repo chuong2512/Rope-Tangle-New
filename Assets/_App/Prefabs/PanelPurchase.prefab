@@ -1590,7 +1590,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 63.55
+  m_fontSize: 48.05
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1875,6 +1875,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8031432048108914892}
     m_Modifications:
+    - target: {fileID: 3948929297110340450, guid: 95a3541767cbcc74f97aff847232f8a1,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 27.65
+      objectReference: {fileID: 0}
     - target: {fileID: 7862263133916233504, guid: 95a3541767cbcc74f97aff847232f8a1,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -2014,6 +2019,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8031432048108914892}
     m_Modifications:
+    - target: {fileID: 3948929297110340450, guid: 95a3541767cbcc74f97aff847232f8a1,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 27.65
+      objectReference: {fileID: 0}
     - target: {fileID: 7862263133916233504, guid: 95a3541767cbcc74f97aff847232f8a1,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -2165,6 +2175,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8031432048108914892}
     m_Modifications:
+    - target: {fileID: 3948929297110340450, guid: 95a3541767cbcc74f97aff847232f8a1,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 27.65
+      objectReference: {fileID: 0}
     - target: {fileID: 7862263133916233504, guid: 95a3541767cbcc74f97aff847232f8a1,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -2314,6 +2329,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8031432048108914892}
     m_Modifications:
+    - target: {fileID: 3948929297110340450, guid: 95a3541767cbcc74f97aff847232f8a1,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 27.65
+      objectReference: {fileID: 0}
     - target: {fileID: 7862263133916233504, guid: 95a3541767cbcc74f97aff847232f8a1,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
