@@ -58,7 +58,7 @@ namespace _Twisted._Scripts.ControllerRelated
                 () =>
                 {
                     winPanel.SetActive(true);
-                    QuangCao.Instance.PhatQuangCao();
+                    //QuangCao.Instance.PhatQuangCao();
                     //if(ISManager.instance) ISManager.instance.ShowInterstitialAds();
                 });
             }
@@ -71,7 +71,7 @@ namespace _Twisted._Scripts.ControllerRelated
                 {
                     failPanelNonPowerup.SetActive(true);
 
-                    QuangCao.Instance.PhatQuangCao();
+                   // QuangCao.Instance.PhatQuangCao();
                 });
             }
         }
